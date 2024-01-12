@@ -35,7 +35,7 @@ const Container = styled(FadeInContainer)`
 
 const Text = styled.div`
     font-weight: 800;
-    font-size: 2.75rem;
+    font-size: 2.8rem;
     transition: all 0.35s ease-in-out;
     text-align: left;
     padding-bottom: 12px;
@@ -53,6 +53,10 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
+`;
+
+const Happy = styled.span`
+    color: rgb(215,165,150);
 `;
 
 
@@ -86,7 +90,7 @@ const PageEleven = () => {
                 <Text>I’m excited for all the things we’ll get</Text>
                 <Text>to experience together in the future!</Text>
             </div>
-            <Text>I love you. ☺</Text>
+            <Text><Happy>I love you.</Happy> ☺</Text>
         </Wrapper>
     </Container>
   )

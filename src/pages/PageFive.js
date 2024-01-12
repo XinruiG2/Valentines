@@ -49,8 +49,7 @@ const CustomText = styled.div`
     font-size: 4rem;
     transition: all 0.35s ease-in-out;
     color: rgb(108,100,91);
-    letter-spacing: 1rem;
-    font-style: italic;
+    letter-spacing: 0.5rem;
 
     &:hover {
         cursor: pointer;
