@@ -10,6 +10,10 @@ const Container = styled.div`
         cursor: pointer;
         color: rgb(178,95,105);
     }
+
+    @media (max-width: 1000px) {
+      font-size: 8.75rem;
+    }
 `;
 
 const HeaderText = ({ text }) => {

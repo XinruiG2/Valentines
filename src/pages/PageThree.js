@@ -36,12 +36,20 @@ const MiddleColumn = styled.div`
     height: 100%;
     background-color: rgb(224, 219, 217);
     position: absolute;
+
+    @media (max-width: 1000px) {
+        width: 50%;
+    }
 `;
 
 const TextContainer = styled.div`
     box-sizing: border-box;
     text-align: center;
     position: absolute;
+
+    @media (max-width: 1000px) {
+        padding: 35px 90px;
+    }
 `;
 
 const Text = styled.div`
@@ -54,6 +62,11 @@ const Text = styled.div`
     &:hover {
         cursor: pointer;
         color: rgb(178,95,105);
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 4.5rem;
+        line-height: 1.35;
     }
 `;
 
@@ -84,10 +97,9 @@ const PageThree = () => {
         <MiddleColumn>
         </MiddleColumn>
         <TextContainer>
-            <Text>It’s rare for me to feel so close to someone</Text>
-            <Text>(even when I’ve known them for a long time),</Text>
-            <Text>but you somehow managed to be an</Text>
-            <Text>exception.</Text>
+            <Text>It’s rare for me to feel so close to someone,</Text>
+            <Text>even when I've known them for a long time,</Text>
+            <Text>but you managed to be an exception</Text>
         </TextContainer>
     </Container>
   )

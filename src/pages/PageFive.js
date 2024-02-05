@@ -28,8 +28,12 @@ const Container = styled(FadeInContainer)`
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 35px 35px;
+    padding: 35px;
     background-color: rgb(244, 239, 237);
+
+    @media (max-width: 1000px) {
+        padding: 65px 40px;
+    }
 `;
 
 const Text = styled.div`
@@ -41,6 +45,11 @@ const Text = styled.div`
     &:hover {
         cursor: pointer;
         color: rgb(178,95,105);
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 5.75rem;
+        text-align: center;
     }
 `;
 
@@ -55,6 +64,12 @@ const CustomText = styled.div`
         cursor: pointer;
         color: rgb(178,95,105);
     }
+
+    @media (max-width: 1000px) {
+        font-size: 5.75rem;
+        line-height: 1.5;
+        letter-spacing: 1rem;
+    }
 `;
 
 const MiddleContainer = styled.div`
@@ -63,6 +78,11 @@ const MiddleContainer = styled.div`
     text-align: center;
     box-sizing: border-box;
     padding: 20px;
+
+    @media (max-width: 1000px) {
+        padding: 30px 20px;
+        margin-bottom: 40px;
+    }
 `;
 
 
@@ -93,7 +113,7 @@ const PageFive = () => {
         </Text>
         <MiddleContainer>
             <CustomText>
-                exciting and beautiful
+                exciting<br/>and<br/>beautiful
             </CustomText>
         </MiddleContainer>
         <Text>

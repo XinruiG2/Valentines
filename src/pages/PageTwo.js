@@ -30,6 +30,10 @@ const Container = styled(FadeInContainer)`
     box-sizing: border-box;
     overflow: hidden;
     background: linear-gradient(to bottom, rgb(244, 239, 237) 36%, rgb(224, 219, 217) 36%, rgb(224, 219, 217) 100%);
+
+    @media (max-width: 1000px) {
+        padding: 35px 40px;
+    }
 `;
 
 const TopLeft = styled.div`
@@ -50,6 +54,10 @@ const Text = styled.div`
         cursor: pointer;
         color: rgb(178,95,105);
     }
+
+    @media (max-width: 1000px) {
+        font-size: 6.5rem;
+    }
 `;
 
 const BottomRight = styled.div`
@@ -64,6 +72,10 @@ const BottomRight = styled.div`
 
 const Wrapper = styled.div`
     width: 50%;
+
+    @media (max-width: 1000px) {
+        width: 100%;
+    }
 `;
 
 const PageTwo = () => {
@@ -93,11 +105,11 @@ const PageTwo = () => {
         </TopLeft>
         <BottomRight>
             <Wrapper>
-                <Text>But we’ve</Text> 
-                <Text>already made so</Text>
-                <Text>many special</Text>
-                <Text>memories</Text>
-                <Text>together.</Text>
+                <Text>But we have</Text> 
+                <Text>already made</Text>
+                <Text>so many special</Text>
+                <Text>and wonderful</Text>
+                <Text>memories together.</Text>
             </Wrapper>
             
         </BottomRight>
