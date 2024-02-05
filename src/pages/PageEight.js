@@ -34,6 +34,10 @@ const Wrapper = styled.div`
     width: 100%;
     box-sizing: border-box;
     padding: 30px 35px;
+
+    @media (max-width: 1000px) {
+        padding: 32px 40px;
+    }
 `;
 
 const Text = styled.div`
@@ -47,6 +51,10 @@ const Text = styled.div`
         cursor: pointer;
         color: rgb(178,95,105);
     }
+
+    @media (max-width: 1000px) {
+        font-size: 3.65rem;
+    }
 `;
 
 const BottomContainer = styled.div`
@@ -54,6 +62,11 @@ const BottomContainer = styled.div`
     background-color: rgb(224, 219, 217);
     box-sizing: border-box;
     padding: 60px 35px;
+
+    @media (max-width: 1000px) {
+        padding: 62px 40px;
+        padding-bottom: 37px;
+    }
 `;
 
 
@@ -80,14 +93,14 @@ const PageEight = () => {
   return (
     <Container>
         <Wrapper>
-            <Text>Finally, when we played in the snow together.</Text>
-            <Text>Both of us were freezing, but with all the constant laughing,</Text>
-            <Text>it was easy to ignore the shivering and numb fingers.</Text>
+            <Text>Finally, when we played in<br/>the snow together.</Text>
+            <Text>Both of us were freezing, but with all the constant laughing,<br/>
+            it was easy to ignore the shivering and numb fingers.</Text>
         </Wrapper>
         <BottomContainer>
-            <Text>I’ve always wanted to do those things when it snowed with someone,</Text>
-            <Text>but never got the chance to.</Text>
-            <Text>I’m glad I didn’t though, because I got to spend that first time with you.</Text>
+            <Text>I’ve always wanted to do those things when it snowed with someone,
+            but never got the chance to.</Text>
+            <Text>I’m glad I didn’t though, because I got to spend that<br/>first time with you.</Text>
         </BottomContainer>
     </Container>
   )

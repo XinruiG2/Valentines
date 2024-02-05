@@ -30,6 +30,10 @@ const Container = styled(FadeInContainer)`
     align-items: start;
     justify-content: space-between;
     text-align: left;
+
+    @media (max-width: 1000px) {
+        padding: 35px 40px 28px 40px;
+    }
 `;
 
 const Text = styled.div`
@@ -42,6 +46,11 @@ const Text = styled.div`
     &:hover {
         cursor: pointer;
         color: rgb(178,95,105);
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 3.65rem;
+        margin-bottom: 8px;
     }
 `;
 

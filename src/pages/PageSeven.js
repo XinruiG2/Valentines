@@ -28,6 +28,10 @@ const Container = styled(FadeInContainer)`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 1000px) {
+        padding: 35px 40px;
+    }
 `;
 
 const RightContainers = styled.div`
@@ -40,6 +44,10 @@ const LeftContainers = styled.div`
     text-align: right;
     box-sizing: border-box;
     padding-left: 100px;
+
+    @media (max-width: 1000px) {
+        padding-left: 40px;
+    }
 `;
 
 const Text = styled.div`
@@ -52,6 +60,10 @@ const Text = styled.div`
     &:hover {
         cursor: pointer;
         color: rgb(178,95,105);
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 3.1rem;
     }
 `;
 
@@ -79,24 +91,20 @@ const PageSeven = () => {
   return (
     <Container>
         <RightContainers>
-            <Text>Or when you came to New York so we could spend New Year’s together.</Text>
-            <Text>I was hesitant because I was worried you’d get sick, but you miraculously</Text>
+            <Text>Or when you came to New York so we could spend New Year’s together.
+            I was hesitant because I was worried you’d get sick, but you miraculously</Text>
             <Text>didn't.</Text>
         </RightContainers>
         <LeftContainers>
             <Text>
-                When we spent the entire night in each other’s arms and you had to
-            </Text>
-            <Text>
+                When we spent the entire night in each other’s arms, and you had to
                 keep covering my mouth so I would keep quiet. I had so much fun
-            </Text>
-            <Text>
                 and so much gratitude that night.
             </Text>
         </LeftContainers>
         <RightContainers>
-            <Text>New year’s was never really a big holiday for me, but you made this one</Text>
-            <Text>feel special.</Text>
+            <Text>New year’s was never really a big holiday for me, but you made this one
+            feel special.</Text>
         </RightContainers>
     </Container>
   )

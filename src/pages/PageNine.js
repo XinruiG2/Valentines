@@ -31,6 +31,10 @@ const Container = styled(FadeInContainer)`
     box-sizing: border-box;
     padding: 30px 35px;
     background-color: rgb(244, 239, 237);
+
+    @media (max-width: 1000px) {
+        padding: 35px 40px;
+    }
 `;
 
 const Text = styled.div`
@@ -43,6 +47,10 @@ const Text = styled.div`
     &:hover {
         cursor: pointer;
         color: rgb(178,95,105);
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 4.35rem;
     }
 `;
 

@@ -31,6 +31,11 @@ const Container = styled(FadeInContainer)`
     box-sizing: border-box;
     padding: 30px 35px;
     background-color: rgb(244, 239, 237);
+
+    @media (max-width: 1000px) {
+        align-items: center;
+        padding: 35px 40px;
+    }
 `;
 
 const Text = styled.div`
@@ -43,6 +48,11 @@ const Text = styled.div`
     &:hover {
         cursor: pointer;
         color: rgb(178,95,105);
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 3.15rem;
+        text-align: center;
     }
 `;
 
@@ -58,11 +68,18 @@ const TextRight = styled.div`
         cursor: pointer;
         color: rgb(178,95,105);
     }
+
+    @media (max-width: 1000px) {
+        font-size: 3.15rem;
+        text-align: center;
+        padding-bottom: 12px;
+    }
 `;
 
 
 const PageTen = () => {
     const navigate = useNavigate();
+    const isWideScreen = window.innerWidth >= 1000;
 
     useEffect(() => {
     const handleKeyDown = (event) => {
@@ -84,12 +101,12 @@ const PageTen = () => {
   return (
     <Container>
         <Text>I love so many things about you...</Text>
-        <Text style={{marginLeft: '6.5vw'}}>Your smile,</Text>
-        <Text style={{marginLeft: '13vw'}}>Your eyes,</Text>
-        <Text style={{marginLeft: '19.5vw'}}>Your touch,</Text>
-        <Text style={{marginLeft: '26vw'}}>Your humor,</Text>
-        <Text style={{marginLeft: '32.5vw'}}>How dependable you are,</Text>
-        <Text style={{marginLeft: '39vw'}}>Your desire to try new things,</Text>
+        <Text style={{ marginLeft: isWideScreen ? '6.5vw' : '0' }}>Your smile,</Text>
+        <Text style={{ marginLeft: isWideScreen ? '13vw' : '0' }}>Your eyes,</Text>
+        <Text style={{ marginLeft: isWideScreen ? '19.5vw' : '0' }}>Your touch,</Text>
+        <Text style={{ marginLeft: isWideScreen ? '26vw' : '0' }}>Your humor,</Text>
+        <Text style={{ marginLeft: isWideScreen ? '32.5vw' : '0' }}>How dependable you are,</Text>
+        <Text style={{ marginLeft: isWideScreen ? '39vw' : '0' }}>Your desire to try new things,</Text>
         <TextRight>and how you always strive to be a better version of yourself.</TextRight>
     </Container>
   )

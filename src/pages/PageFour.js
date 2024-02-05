@@ -33,7 +33,7 @@ const Container = styled(FadeInContainer)`
     background-color: rgb(244, 239, 237);
 
     @media (max-width: 1000px) {
-        padding: 30px 37px;
+        padding: 30px 38px;
     }
 `;
 
