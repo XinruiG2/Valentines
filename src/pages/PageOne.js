@@ -19,10 +19,10 @@ const FadeInContainer = styled.div`
 const Container = styled(FadeInContainer)`
     animation: ${fadeIn} 0.75s forwards;
     width: 100vw;
-    height: 100vh;
+    height: ${props => props.height}px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, rgb(244, 239, 237) 52%, rgb(224, 219, 217) 48%, rgb(224, 219, 217) 100%);
+    background: linear-gradient(to bottom, rgb(244, 239, 237) 54%, rgb(243,220,222) 46%, rgb(224, 219, 217) 100%);
     color: rgb(108,100,91);
     font-family: 'Inter', serif;
     box-sizing: border-box;
@@ -71,6 +71,7 @@ const Wrapper = styled.div`
 
 const PageOne = () => {
     const navigate = useNavigate();
+    const viewportHeight = window.innerHeight;
 
     useEffect(() => {
     const handleKeyDown = (event) => {
@@ -82,15 +83,21 @@ const PageOne = () => {
         }
     };
 
+    const handleTouchEnd = () => {
+        navigate('/page2');
+    };
+
     window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('touchend', handleTouchEnd);
 
     return () => {
         window.removeEventListener('keydown', handleKeyDown);
+        window.removeEventListener('touchend', handleTouchEnd);
     };
     }, [navigate]);
 
   return (
-    <Container>
+    <Container height={viewportHeight}>
         <Wrapper>
             <Text>Here's</Text>
             <Text>something</Text>

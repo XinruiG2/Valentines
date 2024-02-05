@@ -41,7 +41,7 @@ const LeftContainer = styled.div`
     justify-content: flex-end;
     padding: 31px 37px;
     box-sizing: border-box;
-    background-color: pink;
+    background-color: rgb(243,220,222);
 
     @media (max-width: 1000px) {
         padding: 31px 39px;
