@@ -63,6 +63,12 @@ const BottomContainer = styled.div`
     }
 `;
 
+const PinkText = styled.div`
+    color: rgb(215,165,150);
+    margin: 0;
+    padding: 0;
+`;
+
 
 const PageEight = () => {
     const navigate = useNavigate();
@@ -95,8 +101,8 @@ const PageEight = () => {
     <Container height={viewportHeight}>
         <Wrapper>
             <Text>Finally, when we played in<br/>the snow together.</Text>
-            <Text>Both of us were freezing, but with all the constant laughing,<br/>
-            it was easy to ignore the shivering and numb fingers.</Text>
+            <Text style={{ paddingBottom: '7px', color: 'rgb(215,165,150)'}}>Both of us were freezing, but with all the constant laughing,</Text>
+            <Text>it was easy to ignore the shivering and numb fingers.</Text>
         </Wrapper>
         <BottomContainer>
             <Text>I’ve always wanted to do those things when it snowed with someone,

@@ -32,7 +32,7 @@ const Container = styled(FadeInContainer)`
     box-sizing: border-box;
 
     @media (max-width: 1000px) {
-        padding: 36px 41px;
+        padding: 40px 45px;
     }
 `;
 
@@ -86,7 +86,7 @@ const LastPage = () => {
     return (
         <Container height={viewportHeight}>
             <StyledH2></StyledH2>
-            <HeaderText>Yours always,</HeaderText>
+            <HeaderText style={{ color: 'rgb(178,95,105)' }}>Yours always,</HeaderText>
             <HeaderText style={{paddingRight: '42px', color: 'rgb(215,165,150)'}}>Rui</HeaderText>
         </Container>
     )

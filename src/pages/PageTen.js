@@ -101,7 +101,7 @@ const PageTen = () => {
 
   return (
     <Container height={viewportHeight}>
-        <Text>I love so many things about you...</Text>
+        <Text style={{ marginTop: '4px' }}>I love so many things about you...</Text>
         <Text style={{ marginLeft: isWideScreen ? '6.5vw' : '0' }}>Your smile,</Text>
         <Text style={{ marginLeft: isWideScreen ? '13vw' : '0' }}>Your eyes,</Text>
         <Text style={{ marginLeft: isWideScreen ? '19.5vw' : '0' }}>Your touch,</Text>
