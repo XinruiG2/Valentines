@@ -22,7 +22,7 @@ const Container = styled(FadeInContainer)`
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to right, rgb(244, 239, 237) 65%, rgb(224, 219, 217) 65%, rgb(224, 219, 217) 100%);
+    background: linear-gradient(to right, rgb(244, 239, 237) 80%, rgb(224, 219, 217) 80%, rgb(224, 219, 217) 100%);
     color: rgb(108,100,91);
     font-family: 'Inter', serif;
     box-sizing: border-box;
@@ -31,6 +31,10 @@ const Container = styled(FadeInContainer)`
     justify-content: start;
     padding: 36px 38px;
     box-sizing: border-box;
+
+    @media (max-width: 1000px) {
+        padding: 36px 40px;
+    }
 `;
 
 const Text = styled.div`
@@ -44,10 +48,14 @@ const Text = styled.div`
         cursor: pointer;
         color: rgb(178,95,105);
     }
+
+    @media (max-width: 1000px) {
+        font-size: 3.85rem;
+    }
 `;
 
 const Wrapper = styled.div`
-    width: 65%;
+    width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -84,11 +92,11 @@ const PageEleven = () => {
     <Container>
         <Wrapper>
             <div>
-                <Text>You’re truly a one of a kind person,</Text>
-                <Text>and I’m so grateful you approached</Text>
-                <Text>me that day in the gym.</Text>
-                <Text>I’m excited for all the things we’ll get</Text>
-                <Text>to experience together in the future!</Text>
+                <Text>You’re truly a one of<br/>a kind person,
+                and I’m<br/> so grateful you approached
+                me that<br/>day in the gym.</Text>
+                <Text style={{ marginTop: '5px' }}>I’m excited for all the things we’ll get
+                to experience together<br/>in the future!</Text>
             </div>
             <Text><Happy>I love you.</Happy> ☺</Text>
         </Wrapper>

@@ -30,6 +30,10 @@ const Container = styled(FadeInContainer)`
     justify-content: end;
     padding: 32px 38px;
     box-sizing: border-box;
+
+    @media (max-width: 1000px) {
+        padding: 36px 41px;
+    }
 `;
 
 const HeaderText = styled.div`
@@ -41,6 +45,11 @@ const HeaderText = styled.div`
         cursor: pointer;
         color: rgb(178,95,105);
     }
+
+    @media (max-width: 1000px) {
+        font-size: 8rem;
+        line-height: 1.25;
+    }
 `;
 
 const StyledH2 = styled.div`
@@ -49,6 +58,10 @@ const StyledH2 = styled.div`
   border-bottom: 1.5px solid #000;
   line-height: 0.1em;
   margin-bottom: 40px;
+
+  @media (max-width: 1000px) {
+    margin-bottom: 52px;
+  }
 `;
 
 const LastPage = () => {
