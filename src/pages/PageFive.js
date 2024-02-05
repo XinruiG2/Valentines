@@ -19,7 +19,7 @@ const FadeInContainer = styled.div`
 const Container = styled(FadeInContainer)`
     animation: ${fadeIn} 0.75s forwards;
     width: 100vw;
-    height: 100vh;
+    height: ${props => props.height}px;
     overflow: hidden;
     font-family: 'Inter', serif;
     box-sizing: border-box;
@@ -67,7 +67,7 @@ const CustomText = styled.div`
 
     @media (max-width: 1000px) {
         font-size: 5.75rem;
-        line-height: 1.5;
+        line-height: 1.4;
         letter-spacing: 1rem;
     }
 `;
@@ -88,6 +88,7 @@ const MiddleContainer = styled.div`
 
 const PageFive = () => {
     const navigate = useNavigate();
+    const viewportHeight = window.innerHeight;
 
     useEffect(() => {
     const handleKeyDown = (event) => {
@@ -99,15 +100,21 @@ const PageFive = () => {
         }
     };
 
+    const handleTouchEnd = () => {
+        navigate('/page6');
+    };
+
     window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('touchend', handleTouchEnd);
 
     return () => {
         window.removeEventListener('keydown', handleKeyDown);
+        window.removeEventListener('touchend', handleTouchEnd);
     };
     }, [navigate]);
 
   return (
-    <Container>
+    <Container height={viewportHeight}>
         <Text>
             You’ve introduced me to so many
         </Text>

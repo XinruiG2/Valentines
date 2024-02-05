@@ -19,7 +19,7 @@ const FadeInContainer = styled.div`
 const Container = styled(FadeInContainer)`
     animation: ${fadeIn} 0.75s forwards;
     width: 100vw;
-    height: 100vh;
+    height: ${props => props.height}px;
     position: relative;
     overflow: hidden;
     font-family: 'Inter', serif;
@@ -80,6 +80,7 @@ const TextRight = styled.div`
 const PageTen = () => {
     const navigate = useNavigate();
     const isWideScreen = window.innerWidth >= 1000;
+    const viewportHeight = window.innerHeight;
 
     useEffect(() => {
     const handleKeyDown = (event) => {
@@ -91,15 +92,21 @@ const PageTen = () => {
         }
     };
 
+    const handleTouchEnd = () => {
+        navigate('/page11');
+    };
+
     window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('touchend', handleTouchEnd);
 
     return () => {
         window.removeEventListener('keydown', handleKeyDown);
+        window.removeEventListener('touchend', handleTouchEnd);
     };
     }, [navigate]);
 
   return (
-    <Container>
+    <Container height={viewportHeight}>
         <Text>I love so many things about you...</Text>
         <Text style={{ marginLeft: isWideScreen ? '6.5vw' : '0' }}>Your smile,</Text>
         <Text style={{ marginLeft: isWideScreen ? '13vw' : '0' }}>Your eyes,</Text>

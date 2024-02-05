@@ -19,7 +19,7 @@ const FadeInContainer = styled.div`
 const Container = styled(FadeInContainer)`
     animation: ${fadeIn} 0.75s forwards;
     width: 100vw;
-    height: 100vh;
+    height: ${props => props.height}px;
     position: relative;
     overflow: hidden;
     font-family: 'Inter', serif;
@@ -74,6 +74,7 @@ const Text = styled.div`
 
 const PageThree = () => {
     const navigate = useNavigate();
+    const viewportHeight = window.innerHeight;
 
     useEffect(() => {
     const handleKeyDown = (event) => {
@@ -85,15 +86,21 @@ const PageThree = () => {
         }
     };
 
+    const handleTouchEnd = () => {
+        navigate('/page4');
+    };
+
     window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('touchend', handleTouchEnd);
 
     return () => {
         window.removeEventListener('keydown', handleKeyDown);
+        window.removeEventListener('touchend', handleTouchEnd);
     };
     }, [navigate]);
 
   return (
-    <Container>
+    <Container height={viewportHeight}>
         <MiddleColumn>
         </MiddleColumn>
         <TextContainer>

@@ -19,7 +19,7 @@ const FadeInContainer = styled.div`
 const Container = styled(FadeInContainer)`
     animation: ${fadeIn} 0.75s forwards;
     width: 100vw;
-    height: 100vh;
+    height: ${props => props.height}px;
     position: relative;
     overflow: hidden;
     font-family: 'Inter', serif;
@@ -61,6 +61,7 @@ const Happy = styled.span`
 
 const PageNine = () => {
     const navigate = useNavigate();
+    const viewportHeight = window.innerHeight;
 
     useEffect(() => {
     const handleKeyDown = (event) => {
@@ -72,15 +73,21 @@ const PageNine = () => {
         }
     };
 
+    const handleTouchEnd = () => {
+        navigate('/page10');
+    };
+
     window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('touchend', handleTouchEnd);
 
     return () => {
         window.removeEventListener('keydown', handleKeyDown);
+        window.removeEventListener('touchend', handleTouchEnd);
     };
     }, [navigate]);
 
   return (
-    <Container>
+    <Container height={viewportHeight}>
         <div>
             <Text>
                 I enjoy the nights we spend talking for hours. 

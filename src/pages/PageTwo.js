@@ -19,7 +19,7 @@ const FadeInContainer = styled.div`
 const Container = styled(FadeInContainer)`
     animation: ${fadeIn} 0.75s forwards;
     width: 100vw;
-    height: 100vh;
+    height: ${props => props.height}px;
     position: relative;
     overflow: hidden;
     font-family: 'Inter', serif;
@@ -80,6 +80,7 @@ const Wrapper = styled.div`
 
 const PageTwo = () => {
     const navigate = useNavigate();
+    const viewportHeight = window.innerHeight;
 
     useEffect(() => {
     const handleKeyDown = (event) => {
@@ -91,15 +92,21 @@ const PageTwo = () => {
         }
     };
 
+    const handleTouchEnd = () => {
+        navigate('/page3');
+    };
+
     window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('touchend', handleTouchEnd);
 
     return () => {
         window.removeEventListener('keydown', handleKeyDown);
+        window.removeEventListener('touchend', handleTouchEnd);
     };
     }, [navigate]);
 
   return (
-    <Container>
+    <Container height={viewportHeight}>
         <TopLeft>
             <Text>It's only been 2 months...</Text>
         </TopLeft>

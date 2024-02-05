@@ -19,7 +19,7 @@ const FadeInContainer = styled.div`
 const Container = styled(FadeInContainer)`
     animation: ${fadeIn} 0.75s forwards;
     width: 100vw;
-    height: 100vh;
+    height: ${props => props.height}px;
     overflow: hidden;
     font-family: 'Inter', serif;
     box-sizing: border-box;
@@ -70,6 +70,7 @@ const Text = styled.div`
 
 const PageSeven = () => {
     const navigate = useNavigate();
+    const viewportHeight = window.innerHeight;
 
     useEffect(() => {
     const handleKeyDown = (event) => {
@@ -81,15 +82,21 @@ const PageSeven = () => {
         }
     };
 
+    const handleTouchEnd = () => {
+        navigate('/page8');
+    };
+
     window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('touchend', handleTouchEnd);
 
     return () => {
         window.removeEventListener('keydown', handleKeyDown);
+        window.removeEventListener('touchend', handleTouchEnd);
     };
     }, [navigate]);
 
   return (
-    <Container>
+    <Container height={viewportHeight}>
         <RightContainers>
             <Text>Or when you came to New York so we could spend New Year’s together.
             I was hesitant because I was worried you’d get sick, but you miraculously</Text>

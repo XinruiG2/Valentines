@@ -20,7 +20,7 @@ const FadeInContainer = styled.div`
 const Container = styled(FadeInContainer)`
     animation: ${fadeIn} 0.75s forwards;
     width: 100vw;
-    height: 100vh;
+    height: ${props => props.height}px;
     background-color: rgb(244,239,237);
     color: rgb(108,100,91);
     font-family: 'Inter', serif;
@@ -67,6 +67,7 @@ const StyledH2 = styled.div`
 const LastPage = () => {
 
     const navigate = useNavigate();
+    const viewportHeight = window.innerHeight;
 
     useEffect(() => {
     const handleKeyDown = (event) => {
@@ -83,7 +84,7 @@ const LastPage = () => {
     }, [navigate]);
 
     return (
-        <Container>
+        <Container height={viewportHeight}>
             <StyledH2></StyledH2>
             <HeaderText>Yours always,</HeaderText>
             <HeaderText style={{paddingRight: '32px'}}>Rui</HeaderText>

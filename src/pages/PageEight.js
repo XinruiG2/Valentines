@@ -19,7 +19,7 @@ const FadeInContainer = styled.div`
 const Container = styled(FadeInContainer)`
     animation: ${fadeIn} 0.75s forwards;
     width: 100vw;
-    height: 100vh;
+    height: ${props => props.height}px;
     overflow: hidden;
     font-family: 'Inter', serif;
     background-color: rgb(244, 239, 237);
@@ -72,6 +72,7 @@ const BottomContainer = styled.div`
 
 const PageEight = () => {
     const navigate = useNavigate();
+    const viewportHeight = window.innerHeight;
 
     useEffect(() => {
     const handleKeyDown = (event) => {
@@ -83,15 +84,21 @@ const PageEight = () => {
         }
     };
 
+    const handleTouchEnd = () => {
+        navigate('/page9');
+    };
+
     window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('touchend', handleTouchEnd);
 
     return () => {
         window.removeEventListener('keydown', handleKeyDown);
+        window.removeEventListener('touchend', handleTouchEnd);
     };
     }, [navigate]);
 
   return (
-    <Container>
+    <Container height={viewportHeight}>
         <Wrapper>
             <Text>Finally, when we played in<br/>the snow together.</Text>
             <Text>Both of us were freezing, but with all the constant laughing,<br/>

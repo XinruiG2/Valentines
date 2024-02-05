@@ -19,7 +19,7 @@ const FadeInContainer = styled.div`
 const Container = styled(FadeInContainer)`
     animation: ${fadeIn} 0.75s forwards;
     width: 100vw;
-    height: 100vh;
+    height: ${props => props.height}px;
     position: relative;
     overflow: hidden;
     background: linear-gradient(to right, rgb(244, 239, 237) 80%, rgb(224, 219, 217) 80%, rgb(224, 219, 217) 100%);
@@ -70,6 +70,7 @@ const Happy = styled.span`
 
 const PageEleven = () => {
     const navigate = useNavigate();
+    const viewportHeight = window.innerHeight;
 
     useEffect(() => {
     const handleKeyDown = (event) => {
@@ -81,15 +82,21 @@ const PageEleven = () => {
         }
     };
 
+    const handleTouchEnd = () => {
+        navigate('/ending');
+    };
+
     window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('touchend', handleTouchEnd);
 
     return () => {
         window.removeEventListener('keydown', handleKeyDown);
+        window.removeEventListener('touchend', handleTouchEnd);
     };
     }, [navigate]);
 
   return (
-    <Container>
+    <Container height={viewportHeight}>
         <Wrapper>
             <div>
                 <Text>You’re truly a one of<br/>a kind person,
