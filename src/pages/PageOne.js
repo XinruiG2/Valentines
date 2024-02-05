@@ -22,7 +22,7 @@ const Container = styled(FadeInContainer)`
     height: ${props => props.height}px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, rgb(244, 239, 237) 54%, rgb(243,220,222) 46%, rgb(224, 219, 217) 100%);
+    background: linear-gradient(to bottom, rgb(244, 239, 237) 54%, rgb(243,220,222) 46%, rgb(243, 220, 222) 100%);
     color: rgb(108,100,91);
     font-family: 'Inter', serif;
     box-sizing: border-box;
@@ -44,13 +44,7 @@ const Container = styled(FadeInContainer)`
 const Text = styled.div`
     font-weight: 800;
     font-size: 6rem;
-    transition: all 0.35s ease-in-out;
     text-align: right;
-
-    &:hover {
-        cursor: pointer;
-        color: rgb(178,95,105);
-    }
 
     @media (max-width: 1000px) {
         font-size: 7rem;

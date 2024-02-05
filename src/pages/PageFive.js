@@ -74,7 +74,7 @@ const CustomText = styled.div`
 
 const MiddleContainer = styled.div`
     width: 100vw;
-    background-color: rgb(224, 219, 217);
+    background-color: rgb(243,220,222);
     text-align: center;
     box-sizing: border-box;
     padding: 20px;

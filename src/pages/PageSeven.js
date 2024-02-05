@@ -53,14 +53,8 @@ const LeftContainers = styled.div`
 const Text = styled.div`
     font-weight: 800;
     font-size: 2.25rem;
-    transition: all 0.35s ease-in-out;
     color: rgb(108,100,91);
     padding-bottom: 10px;
-
-    &:hover {
-        cursor: pointer;
-        color: rgb(178,95,105);
-    }
 
     @media (max-width: 1000px) {
         font-size: 3.1rem;

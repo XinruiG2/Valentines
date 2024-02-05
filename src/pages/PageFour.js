@@ -40,14 +40,8 @@ const Container = styled(FadeInContainer)`
 const Text = styled.div`
     font-weight: 800;
     font-size: 3.25rem;
-    transition: all 0.35s ease-in-out;
     padding-bottom: 7px;
     color: rgb(108,100,91);
-
-    &:hover {
-        cursor: pointer;
-        color: rgb(178,95,105);
-    }
 
     @media (max-width: 1000px) {
         font-size: 5rem;

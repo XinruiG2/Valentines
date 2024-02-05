@@ -43,14 +43,8 @@ const Wrapper = styled.div`
 const Text = styled.div`
     font-weight: 800;
     font-size: 2.25rem;
-    transition: all 0.35s ease-in-out;
     color: rgb(108,100,91);
     padding-bottom: 10px;
-
-    &:hover {
-        cursor: pointer;
-        color: rgb(178,95,105);
-    }
 
     @media (max-width: 1000px) {
         font-size: 3.65rem;
@@ -59,7 +53,7 @@ const Text = styled.div`
 
 const BottomContainer = styled.div`
     width: 100%;
-    background-color: rgb(224, 219, 217);
+    background-color: rgb(243,220,222);
     box-sizing: border-box;
     padding: 60px 35px;
 

@@ -29,7 +29,7 @@ const Container = styled(FadeInContainer)`
     padding: 27px 34px;
     box-sizing: border-box;
     overflow: hidden;
-    background: linear-gradient(to bottom, rgb(244, 239, 237) 36%, rgb(224, 219, 217) 36%, rgb(224, 219, 217) 100%);
+    background: linear-gradient(to bottom, rgb(244, 239, 237) 36%, rgb(243,220,222) 36%, rgb(243, 220, 222) 100%);
 
     @media (max-width: 1000px) {
         padding: 35px 40px;
@@ -48,12 +48,6 @@ const TopLeft = styled.div`
 const Text = styled.div`
     font-weight: 800;
     font-size: 4.5rem;
-    transition: all 0.35s ease-in-out;
-
-    &:hover {
-        cursor: pointer;
-        color: rgb(178,95,105);
-    }
 
     @media (max-width: 1000px) {
         font-size: 6.5rem;

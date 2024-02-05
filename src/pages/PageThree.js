@@ -34,7 +34,7 @@ const Container = styled(FadeInContainer)`
 const MiddleColumn = styled.div`
     width: 43%;
     height: 100%;
-    background-color: rgb(224, 219, 217);
+    background-color: rgb(243,220,222);
     position: absolute;
 
     @media (max-width: 1000px) {
