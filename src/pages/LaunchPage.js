@@ -21,7 +21,7 @@ const FadeInContainer = styled.div`
 const Container = styled(FadeInContainer)`
     animation: ${fadeIn} 0.75s forwards;
     width: 100%;
-    height: 100vh;
+    height: ${props => props.height}px;
     position: relative;
     overflow: hidden;
     overflow-y: hidden;
@@ -30,8 +30,6 @@ const Container = styled(FadeInContainer)`
     font-family: 'Inter', serif;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-
 `;
 
 const LeftContainer = styled.div`
@@ -43,7 +41,7 @@ const LeftContainer = styled.div`
     justify-content: flex-end;
     padding: 31px 37px;
     box-sizing: border-box;
-    background-color: green;
+    background-color: pink;
 
     @media (max-width: 1000px) {
         padding: 31px 39px;
@@ -94,6 +92,7 @@ const LaunchPage = () => {
 //     navigate("/home");
 //   }
 
+    const viewportHeight = window.innerHeight;
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -117,7 +116,7 @@ const LaunchPage = () => {
     }, [navigate]);
 
     return (
-        <Container>
+        <Container height={viewportHeight}>
             <RightContainer>
                 <StyledH2>
                     <span>Use your arrow keys or tap to navigate this website</span>
