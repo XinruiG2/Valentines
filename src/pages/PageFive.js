@@ -50,18 +50,12 @@ const Text = styled.div`
 const CustomText = styled.div`
     font-weight: 800;
     font-size: 4rem;
-    transition: all 0.35s ease-in-out;
     color: rgb(108,100,91);
     letter-spacing: 0.5rem;
 
-    &:hover {
-        cursor: pointer;
-        color: rgb(178,95,105);
-    }
-
     @media (max-width: 1000px) {
         font-size: 5.75rem;
-        line-height: 1.4;
+        line-height: 1.35;
         letter-spacing: 1rem;
     }
 `;
@@ -74,7 +68,7 @@ const MiddleContainer = styled.div`
     padding: 20px;
 
     @media (max-width: 1000px) {
-        padding: 30px 20px;
+        padding: 60px 20px;
         margin-bottom: 40px;
     }
 `;

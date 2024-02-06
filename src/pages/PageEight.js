@@ -101,7 +101,7 @@ const PageEight = () => {
     <Container height={viewportHeight}>
         <Wrapper>
             <Text>Finally, when we played in<br/>the snow together.</Text>
-            <Text style={{ paddingBottom: '7px', color: 'rgb(215,165,150)'}}>Both of us were freezing, but with all the constant laughing,</Text>
+            <Text style={{ paddingBottom: '7px', color: 'rgb(200,150,135)'}}>Both of us were freezing, but with all the constant laughing,</Text>
             <Text>it was easy to ignore the shivering and numb fingers.</Text>
         </Wrapper>
         <BottomContainer>

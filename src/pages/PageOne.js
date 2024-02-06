@@ -22,7 +22,7 @@ const Container = styled(FadeInContainer)`
     height: ${props => props.height}px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, rgb(244, 239, 237) 54%, rgb(243,220,222) 46%, rgb(243, 220, 222) 100%);
+    background: linear-gradient(to bottom, rgb(244, 239, 237) 55%, rgb(243,220,222) 45%, rgb(243, 220, 222) 100%);
     color: rgb(108,100,91);
     font-family: 'Inter', serif;
     box-sizing: border-box;

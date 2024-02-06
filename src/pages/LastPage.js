@@ -87,7 +87,7 @@ const LastPage = () => {
         <Container height={viewportHeight}>
             <StyledH2></StyledH2>
             <HeaderText style={{ color: 'rgb(178,95,105)' }}>Yours always,</HeaderText>
-            <HeaderText style={{paddingRight: '42px', color: 'rgb(215,165,150)'}}>Rui</HeaderText>
+            <HeaderText style={{paddingRight: '42px', color: 'rgb(200,150,135)'}}>Rui</HeaderText>
         </Container>
     )
 }

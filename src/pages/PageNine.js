@@ -49,7 +49,7 @@ const Text = styled.div`
 `;
 
 const Happy = styled.span`
-    color: rgb(215,165,150);
+    color: rgb(200,150,135);
 `;
 
 
